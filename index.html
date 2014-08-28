@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>Verbaline</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="js/settingless.js"></script>
         <!--script src="js/bootstrap.min.js"></script-->
      <link rel="stylesheet/less" href="css/less/bootstrap.less">
@@ -47,16 +48,23 @@ and open the template in the editor.
                     </div>
                     <div class="col-md-3">
                         <ul class="privat nav navbar-nav">
-                            <li><a href="#">Регистрация</a></li>
-                            <li><a>|</a></li>
+                            <li><i class="fa fa-user"></i><a href="#">Регистрация</a></li>
+                            <li><span>|</span></li>
                             <li><a href="#">Вход</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <div class="mycourses">
-                            <i></i><span>Мои курсы</span>
-                            <br/>
-                            <a href="">0 курсов</a>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                     <i class="fa fa-2x fa-briefcase"></i>
+                                </div>
+                                 <div class="col-xs-9">
+                                    <span> Мои курсы</span>
+                                    <br/>
+                                    <a href="">0 курсов</a>
+                                </div>
+                            </div>    
                         </div>
                     </div>
                 </div>            
@@ -66,16 +74,16 @@ and open the template in the editor.
             <div class="container">
                 <div class="row">
                             <div class="col-md-6">
-                                <img src="img/logo.svg">
+                                <img class="img-responsive" src="img/logo.svg">
                             </div>
                             <div class="col-md-3">
-                                <ul>
-                                   <li>Заказать звонка</li>
-                                   <li>Задать вопрос</li>
+                                <ul class="list-unstyled">
+                                   <li><i class="fa grey fa-reply"></i> <a href="">Заказать звонка</a></li>
+                                   <li><i class="fa grey fa-envelope"></i> <a href="">Задать вопрос</a></li>
                                 </ul>
                             </div>
-                            <div class="col-md-3">
-                                <span>+7 </span><span>900 889 76</span>
+                            <div class="col-md-3 phone-num">
+                                <span class="phonefirst">+7 </span><span>900 889 76</span>
                             </div>
                 </div>            
             </div>
@@ -83,56 +91,108 @@ and open the template in the editor.
         <div id="main-nav" class="container-fluid">
             <div class="container">
                 <div class="row">
-                  <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-8">
-                                 <nav class="navbar navbar-default" role="navigation">
-                            
-                                    <!-- Brand and toggle get grouped for better mobile display -->
-                                    <div class="navbar-header">
-                                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                      </button>
-                                    </div>
+                    <div class="col-md-8">
+                         <nav class="navbar navbar-default" role="navigation">
 
-                                    <!-- Collect the nav links, forms, and other content for toggling -->
-                                    <div class="collapse navbar-collapse" id="main-navbar">
-                                      <ul class="nav navbar-nav">
-                                        <li class="active"><a href="#">Главная</a></li>
-                                        <li><a href="#">О проекте</a></li>
-                                        <li><a href="#">Наши преподаватели</a></li>
-                                        <li><a href="#">Курсы</a></li>
-                                        <li><a href="#">Расписание</a></li>
-                                        <li><a href="#">Отзывы</a></li>
-                                      </ul>
-                                    </div><!-- /.navbar-collapse -->
-
-                                </nav>
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
                             </div>
-                            <div class="col-md-4">
-                                поиск
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="main-navbar">
+                              <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Главная</a></li>
+                                <li><a href="#">О проекте</a></li>
+                                <li><a href="#">Преподаватели</a></li>
+                                <li><a href="#">Курсы</a></li>
+                                <li><a href="#">Расписание</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                              </ul>
+                            </div><!-- /.navbar-collapse -->
+
+                        </nav>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                        <div class="row search">
+                            <div class="col-xs-2 search-icon">
+                                <i class="fa fa-2x fa-search"></i>
+                            </div>
+                            <div class="col-xs-10">
+                                <input class="search-str" value="Поиск"/>
                             </div>
                         </div>
-                    </div>    
-                </div>            
+                    </div>
+                </div>          
             </div>
         </div>
         <div id="flats" class="container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
                             <div class="col-md-8">
-                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="schedule">
+                                            <h3>Август</h3>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                   
+                                                </div>
+                                                 <div class="col-sm-6">
+                                                     <h2>Расписание занятий</h2>
+                                                     <span>+ 3 новых курса</span>
+                                                     <span>Всего 409 студентов</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-block">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                     <h2>Новости</h2>
+                                                     <p>Бизнес-английский легко с нами всего за два месяца...</p>
+                                                     <span>читать далее</span>
+                                                </div>
+                                                 <div class="col-sm-6">
+                                                     <img class="img-responsive" src="/img/photo1.jpg"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="promo-block">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                     <h2>Бесплатное занятие</h2>
+                                                     <a class="promo-button">Записаться!</a>
+                                                </div>
+                                                 <div class="col-sm-6">
+                                                    <img class="img-responsive" src="/img/photo2.jpg"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="about-block">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                     <h2>О проекте</h2>
+                                                     <p>Вам не понадобится скайп, все гораздо проще. Уроки в вашем браузере! </p>
+                                                     <span>Подробнее о проекте</span>
+                                                </div>
+                                                 <div class="col-sm-6">
+                                                    <img class="img-responsive" src="/img/photo3.jpg"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-4">
                                 <img alt="telka" src="img/telka.svg"/>
                             </div>
-                        </div>
-                    </div>
                 </div>            
             </div>
         </div>

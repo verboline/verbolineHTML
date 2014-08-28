@@ -7,37 +7,116 @@ and open the template in the editor.
     Created on : Aug 24, 2014, 9:45:56 PM
     Author     : belial
 */
+
+@grey: #D1D1D1;
 @orange:   #FF753E;
+@greenBlue: #006778;
+
+@fontBase:14px;
+@main-nav-height: 33px;
+
+.borderBottom(@color:@grey,@thick:1px) {
+    border-bottom: solid @arguments; 
+}
+.borderTop(@color:@grey,@thick:1px) {
+    border-top: solid @arguments; 
+}
+
+.search-str {
+    color: @grey;
+    height: @main-nav-height;
+    border:none;
+}
+.search-icon {
+    background: @orange;
+    color:white;
+    height: @main-nav-height;
+    i{
+       margin-right: 3px; 
+    }
+}
+
+#logo {
+        a{
+            text-decoration: underline;
+            color: #888888;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+      i {
+            color: @grey;
+        }
+      .row {
+        padding-top: 2%;
+        padding-bottom: 1%;
+        }
+}
+.phone-num {
+    color: @orange;
+    font-size: @fontBase*1.8;
+    text-align: right;
+    padding-top: 15px;
+    .phonefirst {
+        color: @greenBlue;
+    }
+}
+
+#main-nav {
+    .borderBottom(@grey,7px);
+    .borderTop();
+    a {
+        color:black;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        padding-top: 6px;
+        font-size:13px;
+        padding-right: 35%;
+        &:first-child {
+            padding-left: 0px;
+        }
+    }
+}
 
 #top-nav {
-    background: #006778; 
+    background: @greenBlue; 
 }
 
 #top-nav .navbar {
-    margin-bottom: 0px;
     min-height: 0px;
-}
-#top-nav .navbar-collapse {
-    padding: 0px;
-}
-
-#top-nav .navbar li a {
-    padding-bottom: 7px;
-    padding-top: 7px;
-    color: #A1C2CB;
-    text-transform: uppercase;
-    font-size: 11px;
-}
-#top-nav .navbar li a:first-child {
-    padding-left: 0px;
+     li a {
+        padding-bottom: 7px;
+        padding-top: 7px;
+        color: #8FB8BE;
+        text-transform: uppercase;
+        font-size: 12px;
+        &:first-child {
+            padding-left: 0px;
+        }
+    }
 }
 
-#top-nav .privat li a {
-    padding-bottom: 7px;
-    padding-top: 7px;
-    color: white;
-    font-size: 14px;
-}
+#top-nav .privat li  {
+    a,span{
+        padding-bottom: 7px;
+        padding-top: 7px;
+        color: white;
+        font-size: 14px;
+        display: inline-block;
+        &:hover {
+            background: transparent;
+        }
+    }
+    a {
+        &:hover {
+            
+        }
+    }
+    i {
+        color:white;
+    }
+    }
 
 .mycourses {
     color:white;
@@ -46,14 +125,26 @@ and open the template in the editor.
     background: #FF753E;
     height: 55px;
     position:absolute;
-    padding: 5%;
-}
-.mycourses span{
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 2% 5%;
+    right: 5%;
+    -webkit-box-shadow: 5px -2px 1px rgba(200, 74, 24, 1);
+    -moz-box-shadow: 5px -2px 1px rgba(200, 74, 24, 1);
+    box-shadow: 5px -2px 1px rgba(200, 74, 24, 1);
+    span{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: @fontBase*0.9;
+    }
+    a{
+        color:white;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    i{
+        margin-top: 7px;
+    }
 }
 
-#logo .row {
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
+
