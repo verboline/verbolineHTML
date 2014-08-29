@@ -22,6 +22,203 @@ and open the template in the editor.
     border-top: solid @arguments; 
 }
 
+.borderRadius(@tleft,@tright,@bright,@bleft) {
+    -webkit-border-radius: @arguments;
+    -moz-border-radius: @arguments;
+    border-radius: @arguments;
+}
+
+.boxShadow(@angleX,@angleY,@blur,@distance,@color){
+    -webkit-box-shadow: @arguments;
+ -moz-box-shadow:     @arguments;
+  box-shadow:         @arguments;
+}
+
+
+
+
+
+#footer {
+    background: url("../img/bg-footer.svg");
+    color:white;
+    .easy {
+    font-size: 45px;
+    }
+    .phone {
+        font-size: 25px;
+    }
+    .promo-button {
+        padding: 3%;
+        font-weight: bold;
+    }
+    .col-md-4 {
+        margin-top: 12%;
+        margin-bottom: 12%;
+        text-align: center;
+    }
+    .callme {
+        text-decoration: underline;
+        color:black;
+        margin-top: 6px;
+        margin-left: -10px;
+        display:inherit;
+        &:hover{
+            text-decoration: none;
+        }
+        i {
+            color:white;
+        }
+    }
+    
+}
+
+.num {
+    width: 70px;
+height: 70px;
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+font-size: 43px;
+font-weight: bold;
+ background: white;
+ color: @orange;
+ display:inline-block;
+ float:left;
+ margin-right: 35px;
+ margin-top:30px;
+ .borderRadius(70px,70px,70px,70px);
+}
+
+
+a.promo-button{
+    .boxShadow(2px, 2px, 1px, 1px, rgba(202, 52, 1, 1));
+  padding: 6%;
+  color:#C83502;
+  background: white;
+    font-size: 21px;
+    margin-top: 10px;
+    display: inline-block;
+  .borderRadius(25px,25px,25px,25px);
+      color:#C83502 !important;
+      &:hover{
+          .boxShadow(2px, 2px, 4px, 0px, rgba(202, 52, 1, 1));
+          text-decoration: none;
+      }
+}
+
+#advantage {
+    .borderTop(@grey,7px);
+    padding-bottom: 40px;
+    background: #EEEEEE;
+    dl {
+        float:left;
+        width:75%;
+    }
+    .better{
+      font-size: 45px;
+    }
+    h2{
+         font-weight: bold;
+         margin-left: 30px;
+    }
+    .pull-left {
+        margin-bottom: 15px;
+    }
+    >.container {
+        position:relative;
+    }
+}
+
+.line-decor {
+    position:absolute;
+    top:-7px;
+}
+
+.content {
+    margin-top: 30px;
+}
+.flat-block-wrapper {
+    width:50%;
+    &:first-of-type {
+        padding-right: 5px;
+    }
+}
+.flat-block {
+    font-size: 13px;
+   margin-top: 5px; 
+   float:left;
+   width:100%;
+   >div {
+     width: 50%;  
+     >img {
+       width:100%;
+   }
+   }
+   h3 {
+       margin-top:  10px;
+   }
+   
+   
+}
+
+.promo-block {
+    background: @orange;
+    .pull-right {
+        padding: 4%;
+    }
+    a {
+        color:#FEFFFF;
+        &:hover {
+            color: darken(#FEFFFF,5%);
+            text-decoration: none;
+        }
+    }
+}
+
+.news-block {
+    background: @grey;
+    .pull-left {
+        padding: 4%;
+    }
+    a {
+        color:#FEFFFF;
+        &:hover {
+            color: darken(#FEFFFF,5%);
+            text-decoration: none;
+        }
+    }
+}
+.about-block {
+    background: #F4D086;
+    a {
+        color:black;
+        &:hover {
+            color: lighten(#FEFFFF,5%);
+            text-decoration: none;
+        }
+    }
+    .pull-left {
+        padding: 4%;
+    }
+}
+.schedule-block {
+    background: @greenBlue;
+    color:#8FB8BE;
+    h4 {
+        text-align: center;
+    }
+    a {
+        color:#FEFFFF;
+        &:hover {
+            color: darken(#FEFFFF,5%);
+            text-decoration: none;
+        }
+    }
+    .pull-right {
+        padding: 4%;
+    }
+}
+
 .search-str {
     color: @grey;
     height: @main-nav-height;
@@ -32,7 +229,8 @@ and open the template in the editor.
     color:white;
     height: @main-nav-height;
     i{
-       margin-right: 3px; 
+       margin-left: -3px; 
+       margin-top: 2px;
     }
 }
 
@@ -120,16 +318,13 @@ and open the template in the editor.
 
 .mycourses {
     color:white;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    .borderRadius(0,0,10px,10px);
     background: #FF753E;
     height: 55px;
     position:absolute;
     padding: 2% 5%;
     right: 5%;
-    -webkit-box-shadow: 5px -2px 1px rgba(200, 74, 24, 1);
-    -moz-box-shadow: 5px -2px 1px rgba(200, 74, 24, 1);
-    box-shadow: 5px -2px 1px rgba(200, 74, 24, 1);
+    .boxShadow(5px, -2px, 0px, 0px, rgba(200, 74, 24, 1));
     span{
         font-weight: bold;
         text-transform: uppercase;
